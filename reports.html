@@ -1,0 +1,27 @@
+<h2>Health Reports</h2>
+
+<table border="1">
+
+<tr>
+<th>Date</th>
+<th>Age</th>
+<th>Blood Pressure</th>
+<th>Cholesterol</th>
+<th>Heart Rate</th>
+<th>Risk</th>
+</tr>
+
+{% for r in reports %}
+
+<tr>
+<td>{{ r.date }}</td>
+<td>{{ r.age }}</td>
+<td>{{ r.bp }}</td>
+<td>{{ r.chol }}</td>
+<td>{{ r.hr }}</td>
+<td>{{ r.risk }}%</td>
+</tr>
+
+{% endfor %}
+
+</table>

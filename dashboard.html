@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Health Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body{
+background:#f4f6fb;
+font-family:Arial;
+}
+
+.hero{
+height:300px;
+background-image:url("https://images.unsplash.com/photo-1579684385127-1ef15d508118");
+background-size:cover;
+background-position:center;
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.card{
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.doctor-scroll{
+display:flex;
+overflow-x:auto;
+gap:20px;
+padding:20px;
+}
+
+.doctor-card{
+min-width:220px;
+background:white;
+border-radius:12px;
+padding:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+transition:0.3s;
+}
+
+.doctor-card:hover{
+transform:scale(1.05);
+}
+
+.doctor-img{
+width:80px;
+height:80px;
+border-radius:50%;
+margin-bottom:10px;
+}
+
+.map-container{
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+<div class="row">
+
+<!-- Sidebar -->
+
+<div class="col-md-2" style="background:#1e2a38;color:white;height:100vh;padding:20px;">
+
+<h3>DoctorAI</h3>
+
+<a href="/" style="display:block;color:white;margin:15px 0;">Dashboard</a>
+
+<a href="/predictor" style="display:block;color:white;margin:15px 0;">Heart Predictor</a>
+
+<a href="/reports" style="display:block;color:white;margin:15px 0;">Health Reports</a>
+
+<a href="/settings" style="display:block;color:white;margin:15px 0;">Settings</a>
+
+</div>
+
+<!-- Main Content -->
+
+<div class="col-md-10">
+
+<div class="hero">
+
+<h1>AI Health Test Dashboard</h1>
+<p>Smart AI-powered health risk prediction platform</p>
+
+</div>
+
+<div class="container mt-5">
+
+<h2 class="text-center mb-4">AI Health Test Dashboard</h2>
+
+<div class="row">
+
+<div class="col-md-4">
+<a href="/predictor">
+<div class="card p-4 text-center">
+<h4>❤️ Heart Disease Test</h4>
+<p>Check your heart disease risk using AI</p>
+</div>
+</a>
+</div>
+
+<div class="col-md-4">
+<div class="card p-4 text-center">
+<h4>🩸 Diabetes Risk Test</h4>
+<p>Coming Soon</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card p-4 text-center">
+<h4>⚖ BMI Calculator</h4>
+<p>Coming Soon</p>
+</div>
+</div>
+
+<div class="container mt-5">
+
+<h3 class="text-center mb-4">Recommended Doctors</h3>
+
+<div class="doctor-scroll">
+
+<div class="doctor-card">
+
+<img src="https://www.yashodahospitals.com/wp-content/uploads/2019/03/dr-bharat-vijay-purohit.jpg" class="doctor-img">
+
+<h5>Dr. Bharat Vijay Purohit</h5>
+<p>Interventional Cardiologist</p>
+<p>Yashoda Hospitals, Hitec City</p>
+
+<p>⭐ 4.8</p>
+
+<button class="btn btn-primary btn-sm">Book Appointment</button>
+
+</div>
+
+
+<div class="doctor-card">
+
+<img src="https://www.carehospitals.com/assets/images/doctors/pln-kapardhi.jpg" class="doctor-img">
+
+<h5>Dr. P. L. N. Kapardhi</h5>
+<p>Interventional Cardiologist</p>
+<p>CARE Hospitals, Banjara Hills</p>
+
+<p>⭐ 4.9</p>
+
+<button class="btn btn-primary btn-sm">Book Appointment</button>
+
+</div>
+
+<div class="doctor-card">
+
+<img src="https://www.apollohospitals.com/wp-content/uploads/2019/10/kiran-teja-varigonda.jpg" class="doctor-img">
+
+<h5>Dr. Kiran Teja Varigonda</h5>
+<p>Cardiologist</p>
+<p>Apollo Hospitals, Jubilee Hills</p>
+
+<p>⭐ 4.6</p>
+
+<button class="btn btn-primary btn-sm">Book Appointment</button>
+
+</div>
+
+<<div class="doctor-card">
+
+<img src="https://www.apollohospitals.com/wp-content/uploads/2018/11/s-srinivasa-reddy.jpg" class="doctor-img">
+
+<h5>Dr. S. Srinivasa Reddy</h5>
+<p>Cardiologist</p>
+<p>Global Hospitals, Hyderabad</p>
+
+<p>⭐ 4.7</p>
+
+<button class="btn btn-primary btn-sm">Book Appointment</button>
+
+</div>
+
+<<div class="doctor-card">
+
+<img src="https://www.starhospitals.in/assets/images/doctors/dr-b-soma-raju.jpg" class="doctor-img">
+
+<h5>Dr. B. Soma Raju</h5>
+<p>Senior Cardiologist</p>
+<p>STAR Hospitals, Hyderabad</p>
+
+<p>⭐ 4.9</p>
+
+<button class="btn btn-primary btn-sm">Book Appointment</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ADD MAP SECTION HERE -->
+
+<div class="container mt-5">
+
+<h3 class="text-center mb-4">Nearby Hospitals in Hyderabad</h3>
+
+<div class="map-container">
+
+<iframe
+width="100%"
+height="400"
+style="border:0"
+loading="lazy"
+allowfullscreen
+src="https://www.google.com/maps?q=hospitals+in+Hyderabad&output=embed">
+
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>
